@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "others",
+  "info": {
+    "name": "other",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "datetime",
+      "default": "2020-12-10T22:00:00.000Z"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
